@@ -1,0 +1,34 @@
+{
+  "name": "electron-angular-prepper",
+  "version": "1.0.0",
+  "description": "Automatically prepare your angular project for electron!",
+  "bin": {
+    "eap": "dist/index.js"
+  },
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "angular",
+    "electron",
+    "electronpackager",
+    "node"
+  ],
+  "author": "Fill Scheers, Jamie Berghmans",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/compiler": "^7.2.7",
+    "@types/co": "^4.6.0",
+    "@types/electron-packager": "^13.0.0",
+    "@types/readline-sync": "^1.4.3",
+    "co": "^4.6.0",
+    "co-prompt": "^1.0.0",
+    "commander": "^2.19.0",
+    "electron": "^4.0.6",
+    "electron-packager": "^13.1.0",
+    "readline-sync": "^1.4.9",
+    "typescript": "^3.3.3333"
+  }
+}
