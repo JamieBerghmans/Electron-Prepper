@@ -1,0 +1,23 @@
+image: node:10
+
+stages:
+  - build
+  - deploy
+
+cache:  
+  paths:
+    - node_modules/
+
+npm install:
+  stage: build
+  script: npm i
+
+build:
+  stage: build
+  script: npm build
+
+deploy: 
+  stage: deploy
+  script:
+    - echo "//registry.npmjs.org/:_authToken=$NPM_AUTH_TOKEN" > ~/.npmrc
+    - npm publish
